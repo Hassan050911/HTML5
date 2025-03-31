@@ -6,7 +6,7 @@ Este libro trata especificamente de HTML5 y no de otras versiones, para comprend
 
 Los encabezados (headers) son importantes porque le dicen al navegador como interpretar el marco de la pagina que sigue, el encabezado mas importante se llama "Content-type" :
 
-                    Content-Type: text/html
+                          Content-Type: text/html
 
 "text/html" se denomina el "Content-Type" o "Type MIME" de la página.   
 
@@ -23,15 +23,15 @@ Es una organización internacional que desarrolla estándares y pautas para gara
 
 ## IMG Etiqueta
 
-Para usar la etiqueta IMG requiere el argumento **SRC="url"**,  esto nombra un archivo de bitmap o pixmap  para que el navegador pueda extraer de la red e interpretarlo como una imagen, para incrustarla en el texto en el punto de aparición de la etiqueta.
+Para usar la etiqueta `<IMG>` requiere el argumento **SRC="url"**,  esto nombra un archivo de bitmap o pixmap  para que el navegador pueda extraer de la red e interpretarlo como una imagen, para incrustarla en el texto en el punto de aparición de la etiqueta.
 
-     <IMG SRC="file://foobar.com/foo/bar/blargh.xbm">
+            <IMG SRC="file://foobar.com/foo/bar/blargh.xbm">
 
 
 <img src="https://www.gtush.com/wp-content/uploads/2018/06/leon-portada.jpg">
 
 
-Este es un ejemplo de la etiqueta "**IMG**" con el argumento "**SRC="url**" , esto no es una etiqueta de cierre, solo es una etiqueta independiente. 
+Este es un ejemplo de la etiqueta **`<IMG>`** con el argumento "**SRC="url**" , esto no es una etiqueta de cierre, solo es una etiqueta independiente. 
 
 ### XBM & XPM
 
@@ -56,12 +56,27 @@ Los navegadores web deben ser compatibles con múltiples formatos de imagen, com
 saba "ICON" en lugar de "IMG".
 Incluía un atributo NAME para imágenes "predefinidas" en el navegador.
 
-                <ICON name="NoEntry" href="ruta/NoEntry.xbm">
+               <ICON name="NoEntry" href="ruta/NoEntry.xbm">
 
+## Propuestas alternativas para incluir contenido 
 
+ Etiqueta  `<INCLUDE>`
 
+ Propuesta por Tony para incluir documentos dentro de otro. Su objetivo era permitir la inclusión de imágenes y otros contenidos sin necesidad de especificar el tipo de archivo.
 
+                              <INCLUDE HREF="...">
 
+Relacionado con la llegada de HTTP2, que aún no estaba implementado. Alternativa:
 
+                       <A HREF="..." INCLUDE>See photo</A>
 
-  
+para compatibilidad con navegadores antiguos.
+
+## Respuesta de Tim Berners-Lee
+
+Tim propuso la siguiente solución:
+
+               <A NAME=fig1 HREF="..." REL="EMBED, PRESENT">Figure</A>
+
+Propuso el uso de valores `REL` para diferenciar la forma en que los navegadores presentan contenido.   
+            
