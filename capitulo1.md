@@ -191,3 +191,7 @@ Entre ellos, Mozilla Foundation y Opera Software propusieron una visión alterna
  **Proceso abierto**
 
 * La evolución de la web debe ser transparente, con acceso público a discusiones y borradores.
+
+ ## WHAT WORKING GROUP?
+
+ 
