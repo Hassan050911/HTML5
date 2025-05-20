@@ -174,10 +174,3 @@ Los input types son los valores del atributo type en la etiqueta `<input>`, que 
 11. `<input type="time">` → Para horas.  
 12. `<input type="datetime">` → Para fechas y horas absolutas.  
 13. `<input type="datetime-local">` → Para fechas y horas locales. 
-
-
-
-
-
-
-
