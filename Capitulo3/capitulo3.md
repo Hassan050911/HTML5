@@ -170,6 +170,58 @@ ___
 Se utiliza para resaltar o marcar fragmentos de texto dentro de un contenido, con el fin de indicar que son relevantes en un contexto específico. Funciona como un "marcador" visual, similar a cuando subrayamos o pintamos con rotulador un texto en papel.
 
 
+#  Headers
 
+### ¿Que son?
 
+Elemento semántico que representa la cabecera de una sección o página y tambien reemplaza el uso genérico de `<div id="header">`.
+
+### Ejemplo 
+
+```html 
+<header>
+  <h1>Mi Blog Personal</h1>
+  <p>Reflexiones sobre tecnología y diseño</p>
+</header>
+```
+
+# `<hgroup>`
+
+### ¿Que es?
+
+Contenedor para múltiples elementos de encabezado relacionados (como en titulos+subtitulo).
+
+### ¿Para que sirve?
+
+Agrupa encabezados que juntos forman una única unidad lógica y evita que subtítulos aparezcan como secciones separadas en el outline del documento.
+
+```html
+<hgroup>
+  <h1>Curso de HTML5</h1>
+  <h2>De principiante a experto en 4 semanas</h2>
+</hgroup>
+```
+
+#  Comparativa HTML4 vs HTML5
+
+| Caso               | HTML4                         | HTML5                         |
+|--------------------|-------------------------------|-------------------------------|
+| **Cabecera**       | `<div id="header">`           | `<header>`                    |
+| **Título+Subtítulo** | `<h1>` + `<h2>` (afecta outline) | `<hgroup><h1>+<h2></hgroup>` |
+| **Semántica**      | No significativa              | Explícita                     |
+
+# Fechas y horas `<time>`
+
+### ¿Para que sirve?
+
+1. Marcar fechas
+2. Horas precisas 
+
+```html
+<time datetime="2023-12-31T23:59:59-05:00" pubdate>
+  31 Diciembre 2023, 11:59 PM (GMT-5)
+</time>
+```
+
+ 
 
