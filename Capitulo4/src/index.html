@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Canvas con IE</title>
+  <!-- Solo IE carga este script -->
+  <!--[if IE]>
+  <script src="excanvas.js"></script>
+  <![endif]-->
+  <script>
+    // Esperamos a que todo cargue
+    window.onload = function() {
+      var canvas = document.getElementById("miCanvas");
+      var ctx = canvas.getContext("2d");
+
+      // Dibujo básico: un rectángulo rojo
+      ctx.fillStyle = "red";
+      ctx.fillRect(20, 20, 150, 100);
+    };
+  </script>
+</head>
+<body>
+  <canvas id="miCanvas" width="400" height="200"></canvas>
+</body>
+</html>
