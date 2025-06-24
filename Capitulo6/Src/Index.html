@@ -1,0 +1,51 @@
+
+<!-- Detectar si el navegador soportaa Geolocation -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Geolocalización con manejo de errores</title>
+</head>
+<body>
+
+  <h1>Mi ubicación</h1>
+  <button onclick="get_location()">Mostrar ubicación</button>
+
+  <p id="output">Aquí aparecerá tu ubicación.</p>
+
+  <script>
+    function get_location() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(show_position, handle_error);
+      } else {
+        document.getElementById('output').innerText = "Tu navegador no soporta Geolocalización.";
+      }
+    }
+
+    function show_position(position) {
+      var lat = position.coords.latitude;
+      var lon = position.coords.longitude;
+      document.getElementById('output').innerText = "Latitud: " + lat + "\nLongitud: " + lon;
+    }
+
+    function handle_error(err) {
+      switch(err.code) {
+        case err.PERMISSION_DENIED:
+          alert("Permiso denegado por el usuario.");
+          break;
+        case err.POSITION_UNAVAILABLE:
+          alert("No se pudo obtener la ubicación.");
+          break;
+        case err.TIMEOUT:
+          alert("Tiempo de espera agotado.");
+          break;
+        default:
+          alert("Error desconocido.");
+          break;
+      }
+    }
+  </script>
+
+</body>
+</html>
