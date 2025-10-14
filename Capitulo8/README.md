@@ -141,6 +141,44 @@ Hasta ahora se ha explicado cómo funcionan las aplicaciones web offline y el ca
      - El manifest cambió mientras se actualizaba.  
      - Algún recurso listado no pudo descargarse correctamente.
 
-       
+# The Fine Art of Debugging  
+
+## 1. Errores al descargar recursos
+
+Si **uno solo** de los archivos del manifest falla al descargarse, **todo el proceso de caché falla**. El navegador solo dispara un evento `error`, sin decir qué salió mal, lo que complica mucho la depuración.
+
+## 2. Cómo el navegador verifica cambios en el manifest
+
+El navegador sigue un **proceso de tres fases** usando las reglas normales de HTTP:
+
+1. **Verifica expiración (HTTP headers)**  
+   - Usa cabeceras como `Expires` o `Cache-Control`.  
+   - Si aún no expira, el navegador **ni siquiera consulta** al servidor.
+
+2. **Consulta con el servidor si cambió**  
+   - Si expiró, envía una petición con la fecha `Last-Modified`.  
+   - Si el archivo no cambió, el servidor responde **304 Not Modified**.  
+   - Si sí cambió, responde **200 OK** con la nueva versión.
+
+3. **Comparación del contenido**  
+   - Si el nuevo manifest tiene el mismo contenido que el anterior, el navegador **no descarga de nuevo los recursos**.
+
+## 3. Problemas comunes
+
+- El servidor puede indicar que el manifest se mantenga en caché durante horas.  
+- Si lo modificas poco después, el navegador **no lo detectará** hasta que el caché expire.  
+- Esto **no es un error**, es parte del funcionamiento normal de HTTP.   
+
+## 4. Solución recomendada
+Desactiva el caché HTTP **solo para el archivo manifest**.  
+Si usas **Apache**, agrega esto en tu archivo `.htaccess`:
+
+```apache
+ExpiresActive On
+ExpiresDefault "access"
+```
+
+
+
 
 
