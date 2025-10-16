@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es"> <!-- <html lang="en" manifest="halma.manifest"> -->
+<head>
+    <meta charset="UTF-8">
+    <title>Tablero Visual</title>
+    <style>
+        body { text-align: center; font-family: sans-serif; }
+        canvas { border: 2px solid #000; margin-top: 20px; }
+        button { margin-top: 20px; padding: 10px 20px; font-size: 16px; }
+    </style>
+</head>
+<body>
+    <h1>Tablero Visual</h1>
+    <canvas id="canvas" width="400" height="400"></canvas>
+    <br>
+    
+    <script>
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+        const size = 50;
+        const rows = 8;
+        const cols = 8;
+        const colors = ["#FF6B6B","#6BCB77","#4D96FF","#FFD93D","#FF6F91","#845EC2"];
+
+        // Dibuja tablero colorido
+        function drawBoard() {
+            for(let y=0; y<rows; y++){
+                for(let x=0; x<cols; x++){
+                    ctx.fillStyle = colors[(x+y) % colors.length];
+                    ctx.fillRect(x*size, y*size, size, size);
+                }
+            }
+        }
+
+        // Crea círculos animados
+        let circles = Array.from({length: 10}, () => ({
+            x: Math.random()*canvas.width,
+            y: Math.random()*canvas.height,
+            r: Math.random()*20+10,
+            dx: (Math.random()-0.5)*2,
+            dy: (Math.random()-0.5)*2,
+            color: colors[Math.floor(Math.random()*colors.length)]
+        }));
+
+        function drawCircles(){
+            circles.forEach(c => {
+                ctx.beginPath();
+                ctx.arc(c.x, c.y, c.r, 0, Math.PI*2);
+                ctx.fillStyle = c.color;
+                ctx.fill();
+            });
+        }
+
+        function updateCircles(){
+            circles.forEach(c => {
+                c.x += c.dx;
+                c.y += c.dy;
+                if(c.x<0 || c.x>canvas.width) c.dx*=-1;
+                if(c.y<0 || c.y>canvas.height) c.dy*=-1;
+            });
+        }
+
+        function animate(){
+            drawBoard();
+            drawCircles();
+            updateCircles();
+            requestAnimationFrame(animate);
+        }
+        animate();
+    </script>
+</body>
+</html>
+
