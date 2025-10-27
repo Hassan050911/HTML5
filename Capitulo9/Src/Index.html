@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejemplos de HTML5 Forms</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    h2 { border-bottom: 2px solid #ccc; padding-bottom: 5px; }
+    form { margin-bottom: 30px; }
+    input, select { margin: 5px 0; padding: 5px; width: 200px; }
+    input[type="submit"] { width: auto; cursor: pointer; }
+    .section { margin-bottom: 40px; }
+  </style>
+</head>
+<body>
+
+  <h1>Ejemplos de HTML5 Forms</h1>
+
+  <!-- DATE PICKERS -->
+  <div class="section">
+    <h2>Date Pickers</h2>
+    <form>
+      <label>Fecha:</label>
+      <input type="date"><br>
+      <label>Mes:</label>
+      <input type="month"><br>
+      <label>Semana:</label>
+      <input type="week"><br>
+      <label>Hora:</label>
+      <input type="time"><br>
+      <label>Fecha + Hora:</label>
+      <input type="datetime-local"><br>
+      <input type="submit" value="Enviar">
+    </form>
+  </div>
+
+  <!-- SEARCH BOXES -->
+  <div class="section">
+    <h2>Search Boxes</h2>
+    <form>
+      <label>Buscar:</label>
+      <input type="search" placeholder="Buscar..."><br>
+      <input type="submit" value="Buscar">
+    </form>
+  </div>
+
+  <!-- COLOR PICKERS -->
+  <div class="section">
+    <h2>Color Pickers</h2>
+    <form>
+      <label>Elige un color:</label>
+      <input type="color" value="#ff0000"><br>
+      <input type="submit" value="Enviar">
+    </form>
+  </div>
+
+  <!-- FORM VALIDATION -->
+  <div class="section">
+    <h2>Form Validation</h2>
+    <form>
+      <label>Email:</label>
+      <input type="email" required placeholder="usuario@correo.com"><br>
+      <label>Web:</label>
+      <input type="url" placeholder="https://www.ejemplo.com"><br>
+      <label>Número:</label>
+      <input type="number" min="0" max="10" step="1" value="5"><br>
+      <input type="submit" value="Enviar">
+    </form>
+  </div>
+
+  <!-- REQUIRED FIELDS -->
+  <div class="section">
+    <h2>Required Fields</h2>
+    <form>
+      <label>Campo obligatorio:</label>
+      <input type="text" required placeholder="Escribe algo..."><br>
+      <input type="submit" value="Enviar">
+    </form>
+  </div>
+
+  <!-- AUTFOCUS -->
+  <div class="section">
+    <h2>Autofocus</h2>
+    <form>
+      <label>Nombre:</label>
+      <input type="text" autofocus placeholder="Tu nombre"><br>
+      <input type="submit" value="Enviar">
+    </form>
+  </div>
+
+  <!-- EMAIL -->
+  <div class="section">
+    <h2>Email</h2>
+    <form>
+      <label>Correo electrónico:</label>
+      <input type="email" placeholder="usuario@correo.com"><br>
+      <input type="submit" value="Enviar">
+    </form>
+  </div>
+
+  <!-- URL -->
+  <div class="section">
+    <h2>URL</h2>
+    <form>
+      <label>Página web:</label>
+      <input type="url" placeholder="https://www.ejemplo.com"><br>
+      <input type="submit" value="Enviar">
+    </form>
+  </div>
+
+  <!-- NUMBERS AS SPINBOXES -->
+  <div class="section">
+    <h2>Números (Spinboxes)</h2>
+    <form>
+      <label>Número (0-10, pasos de 2):</label>
+      <input type="number" min="0" max="10" step="2" value="6"><br>
+      <input type="submit" value="Enviar">
+    </form>
+  </div>
+
+  <!-- NUMBERS AS SLIDERS -->
+  <div class="section">
+    <h2>Números (Sliders)</h2>
+    <form>
+      <label>Elige un número:</label>
+      <input type="range" min="0" max="10" step="2" value="6"><br>
+      <input type="submit" value="Enviar">
+    </form>
+  </div>
+
+</body>
+</html>
