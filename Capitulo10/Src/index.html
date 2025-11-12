@@ -37,6 +37,15 @@
 <body>
 
   <!-- Ejemplo de Persona -->
+  
+ <!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejemplo de Persona</title>
+</head>
+<body>
   <article itemscope itemtype="http://data-vocabulary.org/Person">
     <h1 itemprop="name">Mark Pilgrim</h1>
     <img src="https://medya-audiovisual.com/wp-content/uploads/2012/09/Estudio-Fotogr%C3%A1fico-Madrid.jpg" 
@@ -52,8 +61,19 @@
       <span itemprop="country-name">USA</span>
     </div>
   </article>
+</body>
+</html>
+
 
   <!-- Ejemplo de Organización -->
+ <!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejemplo de Organización</title>
+</head>
+<body>
   <article itemscope itemtype="http://data-vocabulary.org/Organization">
     <h1 itemprop="name">Anna’s Pizzeria</h1>
     <img src="https://www.ditaly.es/wp-content/uploads/2023/01/como-montar-pizzeria.png" 
@@ -74,36 +94,43 @@
       <meta itemprop="longitude" content="-78.851426">
     </span>
   </article>
+</body>
+</html>
 
-  <!-- Ejemplo de Review con Microdata -->
-  <article itemscope itemtype="http://data-vocabulary.org/Review">
-    <h1 itemprop="itemreviewed">Anna’s Pizzeria</h1>
+
+<!-- Ejemplo de Review con Microdata -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejemplo de Organización</title>
+</head>
+<body>
+  <article itemscope itemtype="http://data-vocabulary.org/Organization">
+    <h1 itemprop="name">Anna’s Pizzeria</h1>
     <img src="https://www.ditaly.es/wp-content/uploads/2023/01/como-montar-pizzeria.png" 
-         alt="Pizza Margherita en Anna’s Pizzeria" width="300" height="200">
-    <p class="rating">★★★★☆ (<span itemprop="rating">4</span> de 5)</p>
-    <p itemprop="summary">Pizza estilo Nueva York en Apex</p>
+         alt="Anna’s Pizzeria" width="300" height="200" itemprop="photo">
     <p itemprop="description">
-      Food is top-notch. Atmosphere is perfect for a neighborhood pizza joint.
-      El restaurante es pequeño pero encantador. En general, una gran experiencia.
+      Pizza estilo Nueva York en el centro histórico de Apex. Ambiente acogedor y comida excelente.
     </p>
-
-    <p itemprop="location" itemscope itemtype="http://data-vocabulary.org/Address">
+    <p>Ubicación:</p>
+    <div itemprop="address" itemscope itemtype="http://data-vocabulary.org/Address">
       <span itemprop="street-address">100 North Salem Street</span><br>
       <span itemprop="locality">Apex</span>,
       <span itemprop="region">NC</span>
       <span itemprop="postal-code">27502</span><br>
       <span itemprop="country-name">USA</span>
-    </p>
-
+    </div>
     <span itemprop="geo" itemscope itemtype="http://data-vocabulary.org/Geo">
       <meta itemprop="latitude" content="35.730796">
       <meta itemprop="longitude" content="-78.851426">
     </span>
-
-    <p>— <span itemprop="reviewer">Mark Pilgrim</span>, última actualización:
-      <time itemprop="dtreviewed" datetime="2010-03-31">31 de marzo de 2010</time>
-    </p>
   </article>
+</body>
+</html>
 
+ 
 </body>
 </html>
