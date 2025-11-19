@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejemplo Completo de Microdata</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background: #f5f5f5;
+      color: #333;
+    }
+    article {
+      background: white;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      margin-bottom: 30px;
+    }
+    h1 {
+      color: #222;
+      font-size: 1.6em;
+    }
+    .rating {
+      color: #e0a800;
+      font-size: 1.2em;
+      font-weight: bold;
+    }
+    img {
+      max-width: 100%;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Ejemplo de Persona -->
+  
+ <!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejemplo de Persona</title>
+</head>
+<body>
+  <article itemscope itemtype="http://data-vocabulary.org/Person">
+    <h1 itemprop="name">Mark Pilgrim</h1>
+    <img src="https://medya-audiovisual.com/wp-content/uploads/2012/09/Estudio-Fotogr%C3%A1fico-Madrid.jpg" 
+         alt="Foto de Mark Pilgrim" itemprop="photo" width="180">
+    <p>Website: <a href="http://diveintohtml5.org" itemprop="url">diveintohtml5.org</a></p>
+    <p>Email: <a href="mailto:mark@example.com" itemprop="email">mark@example.com</a></p>
+    <p>Dirección:</p>
+    <div itemprop="address" itemscope itemtype="http://data-vocabulary.org/Address">
+      <span itemprop="street-address">100 North Salem Street</span><br>
+      <span itemprop="locality">Apex</span>,
+      <span itemprop="region">NC</span>
+      <span itemprop="postal-code">27502</span><br>
+      <span itemprop="country-name">USA</span>
+    </div>
+  </article>
+</body>
+</html>
+
+
+  <!-- Ejemplo de Organización -->
+ <!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejemplo de Organización</title>
+</head>
+<body>
+  <article itemscope itemtype="http://data-vocabulary.org/Organization">
+    <h1 itemprop="name">Anna’s Pizzeria</h1>
+    <img src="https://www.ditaly.es/wp-content/uploads/2023/01/como-montar-pizzeria.png" 
+         alt="Anna’s Pizzeria" width="300" height="200" itemprop="photo">
+    <p itemprop="description">
+      Pizza estilo Nueva York en el centro histórico de Apex. Ambiente acogedor y comida excelente.
+    </p>
+    <p>Ubicación:</p>
+    <div itemprop="address" itemscope itemtype="http://data-vocabulary.org/Address">
+      <span itemprop="street-address">100 North Salem Street</span><br>
+      <span itemprop="locality">Apex</span>,
+      <span itemprop="region">NC</span>
+      <span itemprop="postal-code">27502</span><br>
+      <span itemprop="country-name">USA</span>
+    </div>
+    <span itemprop="geo" itemscope itemtype="http://data-vocabulary.org/Geo">
+      <meta itemprop="latitude" content="35.730796">
+      <meta itemprop="longitude" content="-78.851426">
+    </span>
+  </article>
+</body>
+</html>
+
+
+<!-- Ejemplo de Review con Microdata -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejemplo de Organización</title>
+</head>
+<body>
+  <article itemscope itemtype="http://data-vocabulary.org/Organization">
+    <h1 itemprop="name">Anna’s Pizzeria</h1>
+    <img src="https://www.ditaly.es/wp-content/uploads/2023/01/como-montar-pizzeria.png" 
+         alt="Anna’s Pizzeria" width="300" height="200" itemprop="photo">
+    <p itemprop="description">
+      Pizza estilo Nueva York en el centro histórico de Apex. Ambiente acogedor y comida excelente.
+    </p>
+    <p>Ubicación:</p>
+    <div itemprop="address" itemscope itemtype="http://data-vocabulary.org/Address">
+      <span itemprop="street-address">100 North Salem Street</span><br>
+      <span itemprop="locality">Apex</span>,
+      <span itemprop="region">NC</span>
+      <span itemprop="postal-code">27502</span><br>
+      <span itemprop="country-name">USA</span>
+    </div>
+    <span itemprop="geo" itemscope itemtype="http://data-vocabulary.org/Geo">
+      <meta itemprop="latitude" content="35.730796">
+      <meta itemprop="longitude" content="-78.851426">
+    </span>
+  </article>
+</body>
+</html>
+
+ 
+</body>
+</html>
